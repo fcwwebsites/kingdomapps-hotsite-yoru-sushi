@@ -1,0 +1,79 @@
+/* Skin A — Editorial clássico · refs: Fasano Bistrot Parigi (creme/marrom, caixa-alta estendida, fotos cheias),
+   Terraço Itália (dourado #8f7c56, caixa-alta espaçada, fileira de cards de foto), 1900 (hero foto + título central) */
+:root{--bg:#f5efe6;--surface:#fbf8f3;--ink:#1f1a14;--muted:#6b5d4d;--line:#d9cdbb;--accent:#8f7c56;--accent-ink:#fff;
+  --font-display:"Cormorant Garamond",Georgia,serif;--font-body:"Montserrat",system-ui,sans-serif;--display-weight:500;
+  --btn-radius:0;--btn-track:.14em;--btn-case:uppercase;--btn-size:.78rem;--wa-bg:#1f1a14;--wa-ink:#f5efe6;--wa-hover:#3a3026;
+  --sec-pad:96px;--card-radius:0;--chip-radius:0;--img-radius:0;--tab-on-bg:#1f1a14;--tab-on-ink:#f5efe6;--amb-overlay:rgba(245,239,230,.84);--amb-menu-h:280px;--gal-gap:12px}
+body{font-weight:400;font-size:15.5px}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+.kicker{color:var(--accent);letter-spacing:.32em}
+.kicker::before{content:"";width:34px;height:1px;background:currentColor}
+/* header translúcido sobre o hero, sólido ao rolar */
+.site-header{position:fixed;left:0;right:0;background:transparent;color:#fff}
+.scrolled .site-header,.nav-open .site-header{background:var(--bg);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.site-nav a{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem}
+.brand-word{font-size:1.5rem;letter-spacing:.04em}
+.brand-logo{width:44px;height:44px}
+.header-cta{background:transparent;border-color:currentColor;color:inherit}
+/* hero: foto cheia + título central (1900 / Fasano) */
+.hero{min-height:min(92vh,880px);display:flex;align-items:center;color:#fff;text-align:center}
+.hero-media{position:absolute;inset:0}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.55),rgba(20,15,10,.5) 40%,rgba(20,15,10,.75))}
+.hero-inner{position:relative;z-index:1;padding-top:110px;padding-bottom:70px}
+.hero-copy{max-width:860px;margin:0 auto}
+.hero h1{font-weight:500;font-size:clamp(2.6rem,7vw,5.2rem);letter-spacing:-.01em}
+.hero .lead{color:rgba(255,255,255,.88);max-width:640px;margin:0 auto 1em;font-weight:300}
+.hero .eyebrow{letter-spacing:.35em;font-size:.72rem}
+.hero-ctas{justify-content:center}
+.hero .btn-wa{background:#f5efe6;color:#1f1a14;border-color:#f5efe6}
+.hero .btn-ghost{color:#fff}
+.chips{justify-content:center}
+.chips li{border-color:rgba(255,255,255,.5);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.hero .open-badge{margin-bottom:.4em}
+/* sobre: texto + grade assimétrica */
+.sobre-copy p{font-size:1.02rem}
+.sobre-copy .apoio{font-family:var(--font-display);font-style:italic;font-size:1.45rem;font-weight:500;color:var(--accent);border-top:1px solid var(--line);padding-top:.8em}
+.gallery{grid-template-columns:repeat(3,1fr);grid-auto-rows:150px}
+.g-item img{aspect-ratio:auto}
+.g-1{grid-column:span 2;grid-row:span 2}
+.g-item:last-child:nth-child(4){grid-column:span 3}.g-item:last-child:nth-child(5){grid-column:span 2}
+.g-item figcaption{font-family:var(--font-body);letter-spacing:.06em}
+@media (min-width:900px){.gallery{grid-auto-rows:190px}}
+/* destaques: colunas com fios verticais */
+.destaques{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.feats{gap:0}
+.feat{padding:22px 24px 22px 0;border-top:1px solid var(--line)}
+@media (min-width:1000px){.feat{border-top:0;border-left:1px solid var(--line);padding:6px 26px}.feat:first-child{border-left:0;padding-left:0}}
+.feat-n{font-style:italic;font-size:2.4rem;line-height:1;color:var(--accent)}
+.feat h3{font-size:1.6rem}
+/* cardápio: lista com fios, abas sublinhadas */
+.amb-menu{opacity:1}
+.menu-tabs [role=tab]{border:0;border-bottom:1px solid var(--line);border-radius:0;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;padding:.8em .2em;margin-right:18px}
+.menu-tabs [role=tab][aria-selected=true]{background:transparent;color:var(--ink);border-bottom:2px solid var(--accent)}
+.menu-panel{background:transparent;border:0;padding:0}
+.menu-cat{font-size:1.9rem}
+.mi{border-bottom:1px solid var(--line)}
+.mi-name{font-family:var(--font-display);font-size:1.3rem;font-weight:600}
+.mi-price{color:var(--ink);font-weight:500}
+.sim-notice{background:#fff;border:1px solid var(--line);border-left:3px solid #c9a227;color:var(--ink)}
+/* entrega */
+.steps-box{background:#fff}
+.steps li::before{border-radius:0;background:transparent;color:var(--accent);border:1px solid var(--accent);font-family:var(--font-display);font-size:1.1rem}
+.app-link{border-radius:0;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}
+/* avaliar */
+.avaliar{background:var(--bg)}
+.avaliar-inner{border:1px solid var(--line);padding:56px 28px;background:#fff}
+.btn-review{border-radius:0}
+/* contato: colunas com fios */
+.ct-card{background:transparent;border:0;border-top:1px solid var(--ink);padding:22px 0 0}
+.ct-card h3{font-size:1.5rem}
+/* cta final */
+.cta-final{color:var(--ink);padding:120px 0}
+.amb-cta::after{background:rgba(245,239,230,.82)}
+.cta-final h2{font-size:clamp(2.4rem,5vw,3.8rem)}
+.cta-final .btn-ghost{color:var(--ink)}
+/* footer */
+.site-footer{background:#1f1a14;color:#e9e0d2}
+.f-links a{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem}
+.wa-float{background:#1f1a14;color:#f5efe6;border-radius:0;text-transform:uppercase;letter-spacing:.14em;font-size:.75rem}
+.wa-float svg{color:#25d366}

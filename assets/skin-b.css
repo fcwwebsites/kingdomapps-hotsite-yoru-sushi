@@ -1,0 +1,67 @@
+/* Skin B — Noite premium · refs: Ouê Sushi Bourbon (fundo profundo, Cormorant + sans, botões de contorno, grade 4-up de fotos),
+   Ahy Prime Sushi (creme #f0eae1 sobre #131313, muito respiro, split texto/foto, caixa-alta espaçada) */
+:root{--bg:#121011;--surface:#1b1819;--ink:#f0eae1;--muted:#b9ad9f;--line:#3a3233;--accent:#c9a46a;--accent-ink:#121011;
+  --font-display:"Cormorant",Georgia,serif;--font-body:"Sora",system-ui,sans-serif;--display-weight:500;
+  --btn-radius:2px;--btn-track:.12em;--btn-case:uppercase;--btn-size:.76rem;--wa-bg:var(--brand);--wa-ink:#fff;
+  --sec-pad:100px;--card-radius:2px;--img-radius:2px;--tab-on-bg:#c9a46a;--tab-on-ink:#121011;--amb-overlay:rgba(18,16,17,.86);
+  --notice-bg:#2a2414;--notice-ink:#f6e7b8;--review-bg:transparent;--review-ink:#f0eae1;--review-line:#c9a46a;--focus:#c9a46a;--header-bg:rgba(18,16,17,.92);--nav-mobile-bg:#121011;--price:#c9a46a}
+body{font-weight:300;font-size:15px;background:radial-gradient(1200px 600px at 85% -10%,color-mix(in srgb,var(--brand) 22%,transparent),transparent 60%),var(--bg)}
+h2{font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:500}
+.kicker{color:var(--accent);letter-spacing:.3em;font-size:.7rem}
+.site-header{backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-nav a{text-transform:uppercase;letter-spacing:.22em;font-size:.68rem;color:var(--muted)}
+.site-nav a:hover{color:var(--ink)}
+.brand-word{font-size:1.45rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.btn-ghost{border-color:var(--accent);color:var(--accent)}
+/* hero split: texto à esquerda, foto emoldurada à direita */
+.hero{display:grid;padding:40px 0 70px}
+.hero-inner{order:2}
+.hero-media{order:1;margin:0 20px;position:relative;aspect-ratio:4/5;max-height:62vh}
+.hero-media img{border-radius:180px 180px 2px 2px}
+.hero-media::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--accent);border-radius:180px 180px 2px 2px;z-index:-1}
+.hero-copy{padding-top:36px}
+.hero h1{font-weight:500;font-size:clamp(2.5rem,5.6vw,4.6rem)}
+.hero .eyebrow{color:var(--accent);letter-spacing:.32em;font-size:.7rem}
+.chips li{border-color:var(--line);color:var(--muted);font-size:.78rem;border-radius:2px}
+@media (min-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;max-width:1180px;margin:0 auto;padding:70px 20px 100px;min-height:min(86vh,860px)}
+  .hero-inner{order:1;padding:0}.hero-media{order:2;margin:0 0 0 30px;max-height:none}
+}
+/* sobre: grade 4-up uniforme */
+.sobre-copy .apoio{color:var(--accent);font-weight:400}
+.gallery{grid-template-columns:repeat(2,1fr)}
+@media (min-width:640px){.gallery{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:900px){.sobre-grid{grid-template-columns:1fr}.sobre-copy{max-width:760px;text-align:center;margin:0 auto}.sobre-copy .kicker{justify-content:center}}
+.g-item img{aspect-ratio:3/4;filter:saturate(.95) contrast(1.03)}
+.g-item{outline:1px solid var(--line);outline-offset:6px}
+/* destaques: cards finos */
+.feat{padding:28px 24px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
+.feat-n{font-size:.75rem;letter-spacing:.3em;font-family:var(--font-body)}
+.feat h3{font-size:1.65rem}
+/* cardápio */
+.menu-tabs [role=tab]{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;border-color:var(--line);color:var(--muted)}
+.menu-panel{background:rgba(27,24,25,.92);backdrop-filter:blur(4px)}
+.menu-cat{font-size:1.8rem;color:var(--ink)}
+.mi{border-bottom:1px solid var(--line)}
+.mi-name{font-family:var(--font-display);font-size:1.25rem;font-weight:600}
+.sim-notice{border-left-color:var(--accent)}
+/* entrega */
+.steps li::before{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.app-link{background:#fff;color:#1f1f1f;border-color:#fff}
+/* avaliar */
+.avaliar{background:color-mix(in srgb,var(--brand) 18%,#121011);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.btn-review svg{color:var(--accent)}
+.selo{color:var(--accent);letter-spacing:.1em;text-transform:uppercase;font-size:.78rem}
+/* contato */
+.ct-card{background:var(--surface)}
+.ct-card h3{color:var(--accent);font-size:1.4rem}
+.ct-list a{color:var(--ink)}
+.text-link{color:var(--accent)}
+/* cta */
+.cta-final{padding:130px 0}
+.amb-cta::after{background:linear-gradient(180deg,rgba(18,16,17,.9),rgba(18,16,17,.62),rgba(18,16,17,.92))}
+.cta-final .btn-ghost{color:#fff;border-color:#fff}
+/* footer */
+.site-footer{background:#0b0a0a;color:var(--muted);border-top:1px solid var(--line)}
+.f-name{color:var(--ink)}
+.wa-float{background:var(--brand);color:#fff;border-radius:2px;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem}
